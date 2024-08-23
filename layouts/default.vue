@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { SpeedInsights } from "@vercel/speed-insights/nuxt";
+
 const links = [
   { to: "/", text: "Home" },
   { to: "/blog", text: "Blog" },
@@ -41,6 +43,7 @@ const socials = [
 </script>
 
 <template>
+  <SpeedInsights />
   <div class="grid min-h-screen grid-rows-[max-content,auto,max-content]">
     <header class="sticky mb-4 bg-white shadow">
       <NuxtLoadingIndicator />
