@@ -4,10 +4,31 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
 
   typescript: {
-    typeCheck: true,
+    // typeCheck: true,
   },
 
-  modules: ["@nuxtjs/tailwindcss", "@nuxt/eslint"],
+  nitro: {
+    experimental: {
+      websocket: true,
+      database: true,
+    },
+  },
+
+  app: {
+    pageTransition: { name: "page", mode: "out-in" },
+  },
+
+  modules: ["@nuxt/eslint", "@nuxt/content", "@nuxt/ui", "@nuxt/image"],
+
+  content: {
+    highlight: {
+      // theme: {
+      //   default: "catppuccin-latte",
+      //   dark: "catppuccin-macchiato",
+      // },
+      theme: "catppuccin-latte",
+    },
+  },
 
   tailwindcss: {
     cssPath: ["~/assets/css/tailwind.css", { injectPosition: "first" }],
@@ -22,7 +43,7 @@ export default defineNuxtConfig({
 
   eslint: {
     config: {
-      stylistic: true, // <---
+      stylistic: false,
     },
   },
 });

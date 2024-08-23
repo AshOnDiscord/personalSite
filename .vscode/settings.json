@@ -10,5 +10,14 @@
   },
   "editor.quickSuggestions": {
     "strings": true
+  },
+  "files.exclude": {
+    "node_modules/": true,
+    ".nuxt/": true,
+    ".*.js*": true,
+    "*lock*": true,
+    // "*config*": true,
+    "package.json": true,
+    ".git*": true
   }
 }
