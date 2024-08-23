@@ -34,7 +34,7 @@ defineExpose({
 <template>
   <main class="h-full">
     <ContentDoc>
-      <template v-slot="{ doc }">
+      <template #default="{ doc }">
         <div class="fixed left-0 top-0 w-full">
           <Transition
             enter-from-class="opacity-0 transition-all ease"
@@ -43,6 +43,7 @@ defineExpose({
             leave-to-class="opacity-0 transition-all ease"
           >
             <UProgress
+              v-if="percentage > 0 && !atTop"
               :value="percentage * 100"
               color="indigo"
               :ui="{
@@ -51,7 +52,6 @@ defineExpose({
                   bar: 'rounded-none [&::-webkit-progress-value]:rounded-none [&::-moz-progress-bar]:rounded-none',
                 },
               }"
-              v-if="percentage > 0 && !atTop"
             />
           </Transition>
         </div>
@@ -68,9 +68,9 @@ defineExpose({
           leave-to-class="opacity-0 transition-all ease"
         >
           <button
+            v-if="percentage > 0 && !atTop"
             class="aspect-1 fixed bottom-8 right-8 flex items-center justify-center rounded-full bg-white p-2 shadow-lg ring-1 ring-indigo-500"
             @click="scrollTop"
-            v-if="percentage > 0 && !atTop"
           >
             <Icon name="radix-icons:arrow-up" class="text-slate-600" />
           </button>
@@ -92,7 +92,7 @@ defineExpose({
           >
             Go back to list
           </NuxtLink>
-          <div class="spotlight fixed left-0 right-0 z-10"></div>
+          <div class="spotlight fixed left-0 right-0 z-10" />
         </main>
       </template>
     </ContentDoc>

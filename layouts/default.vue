@@ -43,8 +43,8 @@ const socials = [
 </script>
 
 <template>
-  <SpeedInsights />
   <div class="grid min-h-screen grid-rows-[max-content,auto,max-content]">
+    <SpeedInsights />
     <header class="sticky mb-4 bg-white shadow">
       <NuxtLoadingIndicator />
       <div class="mx-auto flex w-[min(65ch,100vw)] gap-4 px-6 py-4">
