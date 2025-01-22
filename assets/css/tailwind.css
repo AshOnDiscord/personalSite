@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 a {
-  @apply text-indigo-500 underline decoration-transparent hover:decoration-current transition-all;
+  @apply text-indigo-500 underline decoration-transparent transition-all hover:decoration-current;
 }
