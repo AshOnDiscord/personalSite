@@ -10,6 +10,7 @@
     "tw\\('(.*?)'\\)",
     "tw\\(\\s*('(.*?)'|\"(.*?)\")\\s*\\)"
   ],
+  "tailwindCSS.emmetCompletions": true,
   "files.exclude": {
     "**/.git": true,
     "**/node_modules": true
