@@ -1,23 +1,18 @@
 {
-  "tailwindCSS.experimental.classRegex": [
-    "tw`(.*?)`",
-    "tw\\('(.*?)'\\)",
-    "tw\\(\\s*('(.*?)'|\"(.*?)\")\\s*\\)"
-  ],
-  "tailwindCSS.experimental.configFile": ".nuxt/tailwind.config.cjs",
   "files.associations": {
     "*.css": "tailwindcss"
   },
   "editor.quickSuggestions": {
     "strings": true
   },
+  "tailwindCSS.experimental.classRegex": [
+    "tw`(.*?)`",
+    "tw\\('(.*?)'\\)",
+    "tw\\(\\s*('(.*?)'|\"(.*?)\")\\s*\\)"
+  ],
+  "tailwindCSS.emmetCompletions": true,
   "files.exclude": {
-    "node_modules/": true,
-    ".nuxt/": true,
-    ".*.js*": true,
-    "*lock*": true,
-    // "*config*": true,
-    "package.json": true,
-    ".git*": true
+    "**/.git": true,
+    "**/node_modules": true
   }
 }

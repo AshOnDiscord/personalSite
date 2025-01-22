@@ -1,49 +1,30 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: "2024-04-03",
+  compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
 
-  typescript: {
-    // typeCheck: true,
-  },
-
-  nitro: {
-    experimental: {
-      websocket: true,
-      database: true,
+  // <meta name="darkreader-lock">
+  app: {
+    head: {
+      charset: "utf-8",
+      viewport: "width=device-width, initial-scale=1",
+      meta: [{ name: "darkreader-lock", content: "" }],
     },
   },
 
-  app: {
-    pageTransition: { name: "page", mode: "out-in" },
-  },
+  modules: ["@nuxtjs/tailwindcss", "@nuxt/eslint", "@nuxt/content"],
 
-  modules: ["@nuxt/eslint", "@nuxt/content", "@nuxt/ui", "@nuxt/image"],
+  typescript: {
+    typeCheck: true,
+  },
 
   content: {
-    highlight: {
-      // theme: {
-      //   default: "catppuccin-latte",
-      //   dark: "catppuccin-macchiato",
-      // },
-      theme: "catppuccin-latte",
-    },
-  },
-
-  tailwindcss: {
-    cssPath: ["~/assets/css/tailwind.css", { injectPosition: "first" }],
-    configPath: "tailwind.config",
-    exposeConfig: {
-      level: 2,
-    },
-    config: {},
-    viewer: true,
-    editorSupport: true,
-  },
-
-  eslint: {
-    config: {
-      stylistic: false,
+    build: {
+      markdown: {
+        highlight: {
+          theme: "catppuccin-latte",
+        },
+      },
     },
   },
 });

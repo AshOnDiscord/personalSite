@@ -1,8 +1,14 @@
-/** @type {import('tailwindcss').Config} */
+import type { Config } from "tailwindcss";
+
 export default {
-  content: [],
+  content: [
+    "./pages/*.{vue,jsx,tsx}",
+    "./components/*.{vue,jsx,tsx}",
+    "./layouts/*.{vue,jsx,tsx}",
+    "./app.vue",
+  ],
   theme: {
     extend: {},
   },
-  plugins: [],
-};
+  plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms")],
+} satisfies Config;
