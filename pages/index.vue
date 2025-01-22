@@ -10,7 +10,7 @@
   <h1 class="mb-2 mt-4 text-2xl">Contact me</h1>
   <ul>
     <li>
-      <a href="<https://discord.com/users/731285784749015111>">@archwiki</a> on
+      <a href="https://discord.com/users/731285784749015111">@archwiki</a> on
       discord
     </li>
     <li>

@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen">
+  <div class="grid min-h-screen grid-rows-[max-content,auto]">
     <nav class="border-b border-slate-200 px-4 py-3">
       <div class="mx-auto flex max-w-prose justify-between">
         <p>ashondiscord</p>

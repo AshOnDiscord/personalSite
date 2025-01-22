@@ -17,4 +17,14 @@ export default defineNuxtConfig({
   typescript: {
     typeCheck: true,
   },
+
+  content: {
+    build: {
+      markdown: {
+        highlight: {
+          theme: "catppuccin-latte",
+        },
+      },
+    },
+  },
 });

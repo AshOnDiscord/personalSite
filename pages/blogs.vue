@@ -1,3 +1,16 @@
+<script setup lang="ts">
+const { data: posts } = await useAsyncData("blog", () => {
+  return queryCollection("blog").all();
+});
+</script>
+
 <template>
-  <h1 class="text-4xl">Blogs</h1>
+  <div>
+    <h1>Blog</h1>
+    <ul>
+      <li v-for="post in posts" :key="post.id">
+        <NuxtLink :to="post.path">{{ post.title }} {{ post.path }}</NuxtLink>
+      </li>
+    </ul>
+  </div>
 </template>
